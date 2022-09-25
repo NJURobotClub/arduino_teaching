@@ -1,6 +1,6 @@
 ---
-cover: .gitbook/assets/NAO机器人jpg.jpg
-coverY: 238.21609862219
+cover: .gitbook/assets/100847511_p0_master1200.jpg
+coverY: -114.68890314304042
 ---
 
 # 简介

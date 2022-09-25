@@ -1,3 +1,8 @@
+---
+cover: ../.gitbook/assets/100107076_p0_master1200.jpg
+coverY: 0
+---
+
 # Week2
 
 ## 一 任务

@@ -1,3 +1,8 @@
+---
+cover: ../.gitbook/assets/98820271_p0_master1200.jpg
+coverY: 11.673151750972764
+---
+
 # Week1
 
 

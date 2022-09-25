@@ -1,3 +1,8 @@
+---
+cover: .gitbook/assets/85542565_p0_master1200.jpg
+coverY: -141.6292495189224
+---
+
 # Week6
 
 组装（寒假）

@@ -8,8 +8,8 @@ coverY: 108.17120622568095
 ## 一 任务
 
 * 熟练arduino烧录程序步骤
-* 学会使用超声波测距模块_HC-SR04_
-* 利用超声波实现对键盘任意按键的控制
+* 学会使用超声波测距模块HC-SR04 |[代码](https://github.com/NJURobotClub/arduino\_teaching/blob/528eb13c37c020be2375c5765b8e6d1c2efdd058/week3/arduino\_wave.ino)
+* 利用超声波实现对键盘任意按键的控制  |[arduino代码](https://github.com/NJURobotClub/arduino\_teaching/blob/528eb13c37c020be2375c5765b8e6d1c2efdd058/week3/hand\_game.ino)  [python代码](https://github.com/NJURobotClub/arduino\_teaching/blob/528eb13c37c020be2375c5765b8e6d1c2efdd058/week3/hand\_gesture.py)
 
 ## 二 器材
 

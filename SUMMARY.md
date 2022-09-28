@@ -9,5 +9,4 @@
   * [超声波传感器HC-SR04](week3/chao-sheng-bo-chuan-gan-qi-hcsr04.md)
 * [Lesson 4](week4/README.md)
   * [SG90舵机](week4/sg90-duo-ji.md)
-* [Lesson 5](week5.md)
-* [Lesson 6](week6.md)
+* [Lesson 5](week6.md)

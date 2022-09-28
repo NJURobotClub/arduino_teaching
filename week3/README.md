@@ -3,7 +3,7 @@ cover: ../.gitbook/assets/93172222_p0_master1200.jpg
 coverY: 108.17120622568095
 ---
 
-# Week3
+# Lesson 3
 
 ## 一 任务
 
@@ -23,6 +23,10 @@ coverY: 108.17120622568095
 #### 1、Introduction
 
 > HC-SR04超声波测距模块可提供**2cm-400cm**的非接触式距离感测功能，测距精度可高达3mm；
+>
+>
+
+<figure><img src="../.gitbook/assets/超声波模块示意.png" alt=""><figcaption></figcaption></figure>
 
 #### 2、 Basic
 
@@ -84,6 +88,8 @@ Serial.print(distance); //打印distance到缓冲区
 ```
 
 注意这个函数，属于Arduino库自带函数。我们将括号里的变量输出到了输出缓冲区，在程序运行时可以打开软件的 “串口监视器” 进行查看，如下图（程序运行时该窗口也会自动跳出来）。
+
+<figure><img src="../.gitbook/assets/1603631825085.png" alt=""><figcaption></figcaption></figure>
 
 接下来，我们需要告诉超声波模块该工作了；并告诉nano板要准备接收来自超声波的信号，对返回的时间进行处理，最终计算出距离。
 
@@ -203,6 +209,8 @@ void loop()
 ```
 
 然后，需要在arduino界面找到你连接的端口号，这里我们示例的端口号为COM5.
+
+<figure><img src="../.gitbook/assets/1603713156774.png" alt=""><figcaption></figcaption></figure>
 
 接着，我们打开**任意的 Python IDE** 在电脑上运行如下python程序：
 

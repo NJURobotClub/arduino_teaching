@@ -44,16 +44,63 @@ TXD为发射引脚（Transmit），接nano板的数字引脚
 
 ## 2.0实验材料
 
-HC-06模块、nano板、USB线、手机一部
+* HC-06模块、nano板、USB线、杜邦线、手机、配置有Arduino开发环境的电脑
+*   手机端串口通信软件（安卓端尽量选择app）：
 
-手机端串口通信软件（安卓端尽量选择app）：
+    1.微信小程序搜：HC蓝牙BLE串口助手（安卓、IOS通用）
 
-微信小程序搜：HC蓝牙BLE串口助手（安卓、IOS通用）
-
-安卓端app：HC蓝牙助手
+    2.安卓端app：HC蓝牙助手（↓安装包↓）
 
 {% file src="../.gitbook/assets/HC蓝牙助手.apk" %}
 
 ## 3.0实验步骤
 
+### 3.1 接线
+
+用MiniUSB线将nano接上电脑，按如下对应关系连接HC-06和nano板：
+
+| HC-06 | Nano |
+| :---: | :--: |
+|  VCC  |  +5V |
+|  GND  |  GND |
+|  RXD  |  D2  |
+|  TXD  |  D3  |
+
+### 3.2烧录代码
+
+将以下代码烧录到nano板上
+
+<pre><code>#include &#x3C;SoftwareSerial.h>   //使用软件串口，能将数字口模拟成串口
+SoftwareSerial BT(2, 3);  //新建对象，接收脚为D2，发送脚为D3
+char val;  //存储接收的变量
+void setup() 
+{
+<strong>  Serial.begin(9600);   //与电脑的串口连接
+</strong>  Serial.println("BT is ready!");
+  BT.begin(9600);  //设置波特率
+<strong>}
+</strong>int p;
+void loop()
+{
+  while(BT.available())   //当串口空闲时
+  {
+    p = BT.parseInt();  //从串口中读入数字
+    Serial.print(p);  //将接收到蓝牙模块传来的数据，输出到串口监视器上
+    Serial.print("\n");
+    if (Serial.read() == "x") //当读到x时结束读取
+    {
+      break;
+    }
+  }
+}</code></pre>
+
+### 3.3 串口测试
+
+* 板子上电以后，HC-06的指示灯闪烁，进入待连接模式
+* 在手机端打开串口通信软件，选择HC-06进行配对，默认配对码为1234
+* 连接成功以后，打开Arduino-工具-串口监视器，检查是否出现”BT is ready！“
+* 手机端自由发射指令（格式：数字+x），观察串口监视器输出是否与发射指令匹配
+
 ## 4.0总结
+
+本次实验实现了使用HC-06进行简单通信的过程，后续做小车时可以将蓝牙指令和小车动作对应，实现对小车的蓝牙控制。

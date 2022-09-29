@@ -13,7 +13,7 @@ coverY: -114.68890314304042
 
 
 
-### 编写者：
+### 编写者：[编辑入口](https://app.gitbook.com/o/hHtdLY1rQ3ma836LnIWH/s/ZxeMQfMZX2oMRKHn9QX1/)          
 
 目前编写进度：前三章完成，东海负责编写蓝牙和循迹模块和第四章的L298N, 如果代码功能单一无法生成完整ino文件，就直接参照前几章放在文字下作示例
 

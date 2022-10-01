@@ -40,5 +40,8 @@ TTL开关信号输出
 
 vcc和GND接上相应5v和地，一个模块的A0接arduino板的A5，另一个模块的A0接arduino板的A6
 
-### 代码示例
+### 2.2代码示例
 
+#### 2.21代码
+
+#### [代码](https://github.com/NJURobotClub/arduino\_2019/blob/main/week6/xunji.ino)

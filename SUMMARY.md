@@ -8,6 +8,7 @@
 * [Lesson 3](week3/README.md)
   * [超声波传感器HC-SR04](week3/chao-sheng-bo-chuan-gan-qi-hcsr04.md)
 * [Lesson 4](week4/README.md)
+  * [L298N](week4/l298n.md)
   * [SG90舵机](week4/sg90-duo-ji.md)
 * [Lesson 5](week6.md)
   * [HC-06蓝牙模块](week6/hc06-lan-ya-mo-kuai.md)

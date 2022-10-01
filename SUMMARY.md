@@ -11,3 +11,4 @@
   * [SG90舵机](week4/sg90-duo-ji.md)
 * [Lesson 5](week6.md)
   * [HC-06蓝牙模块](week6/hc06-lan-ya-mo-kuai.md)
+  * [循迹模块](week6/xun-ji-mo-kuai.md)

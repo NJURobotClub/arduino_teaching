@@ -44,7 +44,7 @@ HC-SR04超声波传感器像蝙蝠一样使用声纳来确定到物体的距离�
 
 ## HC-SR04超声波传感器引脚
 
-![](<../.gitbook/assets/image (3) (1).png>)
+![](<../.gitbook/assets/image (3) (1) (1) (1) (1).png>)
 
 引脚
 

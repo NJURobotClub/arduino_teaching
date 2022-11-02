@@ -37,23 +37,23 @@ Arduino Uno R3开发板 USB数据线 三根公母线 SG90舵机 一台安装Ardu
 代码1：
 
 ```
-#include <Servo.h>						// 调用Servo库
+#include <Servo.h>            // 调用Servo库
 
-Servo servo_10;							// 定义Servo对象来控制
-		
+Servo myservo;             // 定义Servo对象来控制
+int pos=0;    
 void setup(){
-  servo_10.attach(10);					// 控制线连接数字10
+  myservo.attach(10);          // 控制线连接数字10
 }
 
 void loop(){
-  for (pos = 0; pos <= 180; pos ++) { 	// 0°到180°
+  for (pos = 0; pos <= 180; pos ++) {   // 0°到180°
     // in steps of 1 degree
-    myservo.write(pos);             	// 舵机角度写入
-    delay(5);                       	// 控制移动速度
+    myservo.write(pos);               // 舵机角度写入
+    delay(5);                         // 控制移动速度
   }
-  for (pos = 180; pos >= 0; pos --) { 	// 从180°到0°
-    myservo.write(pos);              	// 舵机角度写入
-    delay(5);                       	// 控制移动速度
+  for (pos = 180; pos >= 0; pos --) {   // 从180°到0°
+    myservo.write(pos);               // 舵机角度写入
+    delay(5);                         // 控制移动速度
   }
 }
 ```

@@ -51,7 +51,9 @@ TXD为发射引脚（Transmit），接nano板的数字引脚
 
     2.安卓端app：HC蓝牙助手（↓安装包↓）
 
-{% file src="../.gitbook/assets/HC蓝牙助手.apk" %}
+<mark style="color:red;">下载链接：https://pan.baidu.com/s/1eEDoePRA9P96Jsxb-7LhCQ 提取码：1111</mark>
+
+<mark style="color:red;"></mark>
 
 ## 3.0 实验步骤
 

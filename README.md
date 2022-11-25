@@ -31,10 +31,6 @@ Arduino是一款便捷灵活、方便上手的开源电子原型平台。包含�
 
 {% embed url="https://www.arduino.cn/" %}
 
-{% embed url="https://tieba.baidu.com/f?kw=arduino" %}
-
-{% embed url="https://tieba.baidu.com/f?kw=arduino" %}
-
 {% embed url="https://www.arduino.cc/" %}
 （英文官网）
 {% endembed %}
@@ -42,8 +38,6 @@ Arduino是一款便捷灵活、方便上手的开源电子原型平台。包含�
 {% embed url="https://bbs.elecfans.com/group_724" %}
 
 {% embed url="http://www.eepw.com.cn/tech/f/k/arduino" %}
-
-{% embed url="https://www.elecfans.com/zt/960253/" %}
 
 <mark style="color:yellow;"></mark>
 

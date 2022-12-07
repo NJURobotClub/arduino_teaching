@@ -76,7 +76,7 @@ NewPing库：在[此处](https://bitbucket.org/teckel12/arduino-new-ping/get/mas
 
 按照下一个示意图将HC-SR04超声波传感器连接到Arduino。
 
-![](<../.gitbook/assets/image (1).png>)
+![](<../.gitbook/assets/image (1) (1).png>)
 
 下表显示了您需要建立的连接：
 

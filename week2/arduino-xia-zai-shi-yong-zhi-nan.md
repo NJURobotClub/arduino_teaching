@@ -15,7 +15,7 @@ Arduino IDE下载：https://www.arduino.cc/en/Main/Software， 根据自己系�
 
 2.在同一工具菜单中，将端口设置为端口号
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 3.在同一工具菜单中，将处理器设置为ATmega328P(旧引导加载程序)。
 

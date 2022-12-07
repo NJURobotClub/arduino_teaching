@@ -10,13 +10,13 @@ coverY: 0
 * 初步掌握Arduino nano各引脚作用
 * 掌握arduino烧录程序步骤
 * 熟悉使用面包板
-* 利用nano板点亮二极管灯泡|[代码地址](https://github.com/NJURobotClub/arduino\_teaching/blob/c0e8ddbf151aac21e55acbd8d0355d32ab56b068/week2/led.ino)
+* 利用nano板点亮LED灯串
 
 
 
 ## 二 器材
 
-* LED灯\*1
+* LED灯串\*1
 * Arduino Nano 板 \*1
 * USB-micro数据线\*1
 * 面板板、排针、杜邦线
@@ -76,13 +76,106 @@ Arduino Nano板需要**电源供电**
 * 5V Pin：为Arduino开发板供电使用，也可以为外部电子元件提供+5V电源。
 * Vin：Vin引脚为Arduino开发板供电时，直流电源电压必须为7V \~ 12V。
 
-#### 四 点亮二极管
+## 四 点亮LED灯串
 
-引脚连接：
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption><p>5V电压LED灯串</p></figcaption></figure>
 
-Arduino
 
-| Arduino Nano               | LED等 |
-| -------------------------- | ---- |
-| 3.3V / D13(Digital Pin 13) | 长端   |
-| GND                        | 短端   |
+
+代码如下（Adafruit\_NeoPixel的CPP和H文件需要下载在同一个文件夹中）
+
+[Adafruit\_NeoPixel.CPP下载地址](https://github.com/NJURobotClub/arduino\_teaching/blob/main/Adafruit\_NeoPixel.cpp)
+
+[Adafruit\_NeoPixel.h下载地址](https://github.com/NJURobotClub/arduino\_teaching/blob/main/Adafruit\_NeoPixel.h)
+
+[下列ino代码下载地址](https://github.com/NJURobotClub/arduino\_teaching/blob/main/nanoled.ino)
+
+```
+#include <SPI.h>
+#include "Adafruit_NeoPixel.h"    //引入头文件
+#ifdef __AVR__
+ #include <avr/power.h> 
+#endif
+
+#define LED_PIN    4     //定义信号输出引脚
+#define LED_COUNT 18     //定义LED灯个数  
+#define ADD true
+#define SUB false
+#define R1 5
+#define R2 6
+
+//RED 0
+//ORANGE 10
+//YELLO 30
+//GREEN 80 
+//BLUE 120
+//DARKBLUE 150
+//PURPLE 190
+
+boolean stat1 = true;     //呼吸状态反转标志
+int val = 100;            //呼吸亮度变量
+int color = 0;            //色彩改变变量
+int count = 0;            //灯珠熄灭时间控制
+int temp=0;
+int temp2=-1;
+Adafruit_NeoPixel strip(LED_COUNT, LED_PIN, NEO_GRB + NEO_KHZ800);//创建灯条对象
+uint32_t hsvcolor = strip.ColorHSV(0*256,255, val); //控制颜色
+
+void tail(int);
+
+void setup(){
+  Serial.begin(9600);
+  strip.begin();           
+  //strip.show();
+
+}
+
+void loop(void){
+  /*if(temp2>0)              //变色呼吸
+  {
+    temp=temp+20;
+    temp2=-temp2;
+  }*/
+
+ tail(80);
+
+  //跑马灯
+  //temp=temp+10;  
+    
+}
+
+void tail(int sideColor){
+  
+  for(int i = 0; i < LED_COUNT; i ++){
+    hsvcolor = strip.ColorHSV(sideColor*256, 255, val);
+    //sideColor=sideColor+10;
+    strip.setPixelColor(i, hsvcolor);
+  }
+/*
+  //呼吸
+  
+  if(val>=90)
+    stat1 = SUB;
+  if(count > 0){
+    stat1 = ADD;              
+    count = 0;
+    temp2=-temp2;
+  }
+  else if(val<=4){ 
+    count ++;
+    strip.show();
+    return;
+  }  
+  */    
+  strip.show();
+/*
+  //呼吸
+ delay(30);
+ if(stat1==SUB) val -= 5;                
+ else if(stat1==ADD) val += 5;  
+ */
+}
+```
+
+
+
